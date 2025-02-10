@@ -1,9 +1,0 @@
-music-player/
-├── docs/
-│   ├── index.html 
-│   ├── style.css 
-│   ├── script.js 
-│   ├── audio/
-│   │   └── demo.mp3 
-│   └── images/
-│       └── cover.jpg 
