@@ -42,3 +42,19 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+/* 同步修改层级关系 */
+.player {
+    max-width: 350px;  /* 调整容器整体尺寸 */
+}
+
+.cover {
+    transition: transform 0.3s;  /* 添加缩放动效 */
+}
+
+/* 响应式适配 */
+@media (max-width: 480px) {
+    .cover-container {
+        width: 120px;
+        height: 120px;
+    }
+}
