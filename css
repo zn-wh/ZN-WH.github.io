@@ -1,36 +1,38 @@
-/* 基础样式 */
-body {
+/* styles.css  */
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background: #f0f2f5;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 90%;
 }
 
-/* 封面样式 */
-.cover-container {
+.album-cover {
     text-align: center;
-    margin: 20px 0;
+    margin-bottom: 1.5rem;
 }
 
-.cover {
-   /* 修改cover样式 */
-.cover {
-    width: min(70%, 230px); /* 取70%宽度和230px中较小值 */
-    height: auto;
-    aspect-ratio: 1; /* 保持正方形 */
-    max-width: 300px; /* 最大允许尺寸 */
-    min-width: 150px; /* 最小保障可读性 */
-}
-}
-
-/* 动画控制 */
-.cover.playing  {
-    animation-play-state: running;
+.album-cover img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    animation: rotate 20s linear infinite;
 }
 
 @keyframes rotate {
@@ -38,29 +40,42 @@ body {
     to { transform: rotate(360deg); }
 }
 
-/* 响应式布局 */
-@media (min-width: 768px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 30px;
-        align-items: start;
-    }
+.song-info {
+    margin-bottom: 1.5rem;
 }
 
-/* 播放器样式 */
-.player-controls {
-    margin: 20px 0;
+.song-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.lyrics-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+.player-container {
+    text-align: center;
 }
 
 audio {
     width: 100%;
-    margin-top: 15px;
 }
 
-.lyrics {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* 响应式设计 */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .album-cover img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .song-title {
+        font-size: 1.2rem;
+    }
 }
