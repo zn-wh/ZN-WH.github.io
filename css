@@ -18,13 +18,14 @@ body {
 }
 
 .cover {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-    animation: rotate 15s linear infinite;
-    animation-play-state: paused;
+   /* 修改cover样式 */
+.cover {
+    width: min(70%, 230px); /* 取70%宽度和230px中较小值 */
+    height: auto;
+    aspect-ratio: 1; /* 保持正方形 */
+    max-width: 300px; /* 最大允许尺寸 */
+    min-width: 150px; /* 最小保障可读性 */
+}
 }
 
 /* 动画控制 */
