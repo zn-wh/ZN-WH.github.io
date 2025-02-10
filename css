@@ -58,3 +58,10 @@ button {
         height: 120px;
     }
 }
+/* 添加多浏览器前缀 */
+.cover-container {
+    -webkit-animation: rotate 10s linear infinite;
+    animation: rotate 10s linear infinite;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
