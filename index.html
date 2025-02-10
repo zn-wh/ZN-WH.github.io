@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>音乐播放器</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <div class="player">
-        <!-- 旋转封面容器 -->
+    <div class="container">
+        <!-- 专辑封面 -->
         <div class="cover-container">
             <img src="images/cover.jpg"  alt="专辑封面" class="cover" id="cover">
         </div>
-        
-        <!-- 播放器控件 -->
-        <audio id="audio" controls>
-            <source src="audio/demo.mp3"  type="audio/mpeg">
-            您的浏览器不支持音频播放
-        </audio>
-        
-        <!-- 自定义控制按钮 -->
-        <div class="controls">
-            <button onclick="togglePlay()">播放/暂停</button>
+
+        <!-- 播放控制 -->
+        <div class="player-controls">
+            <h1 id="song-title">歌曲名称</h1>
+            <audio id="audio-player" controls>
+                <source src="audio/demo.mp3"  type="audio/mpeg">
+                浏览器不支持音频播放
+            </audio>
+        </div>
+
+        <!-- 歌词简介 -->
+        <div class="lyrics">
+            <h2>歌词简介</h2>
+            <p id="lyrics-content">这里是歌词内容...</p>
         </div>
     </div>
 
