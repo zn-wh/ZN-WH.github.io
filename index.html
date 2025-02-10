@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="player">
+        <!-- 旋转封面容器 -->
+        <div class="cover-container">
+            <img src="images/cover.jpg"  alt="专辑封面" class="cover" id="cover">
+        </div>
+        
+        <!-- 播放器控件 -->
+        <audio id="audio" controls>
+            <source src="audio/demo.mp3"  type="audio/mpeg">
+            您的浏览器不支持音频播放
+        </audio>
+        
+        <!-- 自定义控制按钮 -->
+        <div class="controls">
+            <button onclick="togglePlay()">播放/暂停</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
