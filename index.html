@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>音乐播放器</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
     <div class="container">
-        <!-- 专辑封面 -->
-        <div class="cover-container">
-            <img src="images/cover.jpg"  alt="专辑封面" class="cover" id="cover">
+        <!-- 封面 -->
+        <div class="album-cover">
+            <img src="cover.jpg"  alt="专辑封面">
         </div>
 
-        <!-- 播放控制 -->
-        <div class="player-controls">
-            <h1 id="song-title">宁宝的歌声</h1>
+        <!-- 歌曲信息 -->
+        <div class="song-info">
+            <h2 class="song-title">歌曲标题</h2>
+            <p class="lyrics-description">歌词简介</p>
+        </div>
+
+        <!-- 音乐播放器 -->
+        <div class="player-container">
             <audio id="audio-player" controls>
-                <source src="audio/demo.mp3"  type="audio/mpeg">
-                浏览器不支持音频播放
+                <source src="music.mp3"  type="audio/mpeg">
+                您的浏览器不支持 audio 元素。
             </audio>
-        </div>
-
-        <!-- 歌词简介 -->
-        <div class="lyrics">
-            <h2>是这个宁</h2>
-            <p id="lyrics-content">你猜</p>
         </div>
     </div>
 
-    <script src="script.js"></script> 
+    <script src="scripts.js"></script> 
 </body>
 </html>
